@@ -1,0 +1,90 @@
+.game {
+  position: relative;
+  width: $row-size;
+  border: 3px solid rgb(24, 22, 22);
+
+  &__field {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__head__row {
+    height: $border-cell;
+    width: $row-size;
+  }
+  &__row {
+    // ряд, в якому 8 ігрових клітинок//
+    display: flex;
+    box-sizing: border-box;
+    width: $row-size;
+    height: $cell-size;
+  }
+
+  &__cell {
+    // ігрова клітинка//
+    box-sizing: border-box;
+   @include square($cell-size);
+    border: 1px solid black;
+    background-color: rgb(69, 17, 17);
+  }
+  &__chekers {
+    position: absolute;
+    box-sizing: border-box;
+    left: $shift-size;
+    top: #{$shift-size};
+    @include circle($chekers-size);
+    border: 2px solid black;
+      
+    &--color--white {
+      background-color: white;
+    }
+    &--color--black {
+      background-color: black;
+    }
+
+    @for $index from 1 to 9 {
+      &--row--#{$index} {
+        top: $border-cell + $shift-size + ($index - 1) * $cell-size;
+      }
+    }
+    @for $index from 1 to 9 {
+      &--col--#{$index} {
+        left: $border-cell + ($index - 1) * $cell-size + $shift-size;
+      }
+    }
+  }
+
+  &__border_cell {
+    width: $border-cell;
+    height: $cell-size;
+    border: 3px;
+    text-align: center;
+    line-height: $cell-size;
+  }
+
+  &__footer__row {
+    display: flex;
+    box-sizing: border-box;
+    height: $border-cell;
+    width: $row-size;
+  }
+  &__corner__cell {
+    width: $border-cell;
+    height: $border-cell;
+  }
+
+  &__footer__cell__2 {
+    width: $cell-size;
+    height: $border-cell;
+    text-align: center;
+    line-height: $border-cell;
+  }
+}
+
+.game__row:nth-child(odd) .game__cell:nth-child(odd) {
+  // в непарному ігровому рядку кожна непарна клітинка - коричнева//
+  background-color: bisque;
+}
+.game__row:nth-child(even) .game__cell:nth-child(even) {
+  // в парному ігровому рядку кожна парна клітинка - коричнева//
+  background-color: bisque;
+}

@@ -1,0 +1,14 @@
+.title {
+  @extend %lage-text;
+  padding: 0;
+
+  @media (min-wigth: 300px) {
+    background-color: yellow;
+  }
+
+  @media (min-wigth: 400px) {
+    background-color: yellowgreen;
+  }
+ }
+
+ 

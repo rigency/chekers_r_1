@@ -1,0 +1,5 @@
+$cell-size: 100px;
+$border-cell: $cell-size / 2;
+$row-size: 8 * $cell-size + 2 * $border-cell;
+$chekers-size: 0.8 * $cell-size;
+$shift-size: ($cell-size - $chekers-size) / 2;
