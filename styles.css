@@ -1,0 +1,143 @@
+.title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+.title {
+  padding: 0;
+}
+@media (min-wigth: 300px) {
+  .title {
+    background-color: yellow;
+  }
+}
+@media (min-wigth: 400px) {
+  .title {
+    background-color: yellowgreen;
+  }
+}
+
+.game {
+  position: relative;
+  width: 900px;
+  border: 3px solid rgb(24, 22, 22);
+}
+.game__field {
+  display: flex;
+  flex-wrap: wrap;
+}
+.game__head__row {
+  height: 50px;
+  width: 900px;
+}
+.game__row {
+  display: flex;
+  box-sizing: border-box;
+  width: 900px;
+  height: 100px;
+}
+.game__cell {
+  box-sizing: border-box;
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  background-color: rgb(69, 17, 17);
+}
+.game__chekers {
+  position: absolute;
+  box-sizing: border-box;
+  left: 10px;
+  top: 10px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid black;
+}
+.game__chekers--color--white {
+  background-color: white;
+}
+.game__chekers--color--black {
+  background-color: black;
+}
+.game__chekers--row--1 {
+  top: 60px;
+}
+.game__chekers--row--2 {
+  top: 160px;
+}
+.game__chekers--row--3 {
+  top: 260px;
+}
+.game__chekers--row--4 {
+  top: 360px;
+}
+.game__chekers--row--5 {
+  top: 460px;
+}
+.game__chekers--row--6 {
+  top: 560px;
+}
+.game__chekers--row--7 {
+  top: 660px;
+}
+.game__chekers--row--8 {
+  top: 760px;
+}
+.game__chekers--col--1 {
+  left: 60px;
+}
+.game__chekers--col--2 {
+  left: 160px;
+}
+.game__chekers--col--3 {
+  left: 260px;
+}
+.game__chekers--col--4 {
+  left: 360px;
+}
+.game__chekers--col--5 {
+  left: 460px;
+}
+.game__chekers--col--6 {
+  left: 560px;
+}
+.game__chekers--col--7 {
+  left: 660px;
+}
+.game__chekers--col--8 {
+  left: 760px;
+}
+.game__border_cell {
+  width: 50px;
+  height: 100px;
+  border: 3px;
+  text-align: center;
+  line-height: 100px;
+}
+.game__footer__row {
+  display: flex;
+  box-sizing: border-box;
+  height: 50px;
+  width: 900px;
+}
+.game__corner__cell {
+  width: 50px;
+  height: 50px;
+}
+.game__footer__cell__2 {
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+}
+
+.game__row:nth-child(odd) .game__cell:nth-child(odd) {
+  background-color: bisque;
+}
+
+.game__row:nth-child(even) .game__cell:nth-child(even) {
+  background-color: bisque;
+}
+
+/*# sourceMappingURL=styles.css.map */
